@@ -1,4 +1,4 @@
-# 混合端口 HTTP和SOCKS5用一个端口
+# 混合端口 HTTP 和 SOCKS5 用一个端口
 mixed-port: 7890
 
 # HTTP 代理端口
@@ -7,23 +7,23 @@ mixed-port: 7890
 # SOCKS5 代理端口
 # socks-port: 7891
 
-# Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
+# Linux 和 macOS 的 redir 代理端口（如需使用此功能，请取消注释）
 # redir-port: 7892
 
 # 允许局域网的连接（可用来共享代理）
 allow-lan: true
 
-# 仅在将allow-lan设置为true时适用
-# #"*": 绑定所有IP地址
-# #192.168.122.11: 绑定单个IPv4地址
-# #"[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
+# 仅在将 allow-lan 设置为 true 时适用
+# #"*": 绑定所有 IP 地址
+# #192.168.122.11: 绑定单个 IPv4 地址
+# #"[aaaa::a8aa:ff:fe09:57d8]": 绑定单个 IPv6 地址
 bind-address: "*"
 ipv6: true
 
-# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script（脚本）
 # mode: rule
 
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
+# 设置日志输出级别（默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: silent
 
@@ -83,7 +83,7 @@ dns:
       - "+.msftconnecttest.com"
       - "+.msftncsi.com"
   fake-ip-filter:
-    #LAN
+    # LAN
     - "*.lan"
     - "*.localdomain"
     - "*.example"
@@ -92,7 +92,7 @@ dns:
     - "*.test"
     - "*.local"
     - "*.home.arpa"
-    #NTP服务
+    # NTP 服务
     - "time.*.com"
     - "time.*.gov"
     - "time.*.edu.cn"
@@ -120,22 +120,22 @@ dns:
     - "clock.neu.edu.cn"
     - "time1.cloud.tencent.com"
     - "time-ios.apple.com"
-    #网易云音乐
+    # 网易云音乐
     - "+.music.163.com"
     - "+.126.net"
-    #百度音乐
+    # 百度音乐
     - "musicapi.taihe.com"
     - "music.taihe.com"
-    #酷狗音乐
+    # 酷狗音乐
     - "songsearch.kugou.com"
     - "trackercdn.kugou.com"
-    #酷我音乐
+    # 酷我音乐
     - "+.kuwo.cn"
-    #JOOX音乐
+    # JOOX 音乐
     - "api-jooxtt.sanook.com"
     - "api.joox.com"
     - "joox.com"
-    #QQ音乐
+    # QQ 音乐
     - "+.y.qq.com"
     - "streamoc.music.tc.qq.com"
     - "mobileoc.music.tc.qq.com"
@@ -143,80 +143,80 @@ dns:
     - "dl.stream.qqmusic.qq.com"
     - "aqqmusic.tc.qq.com"
     - "amobile.music.tc.qq.com"
-    #虾米音乐
+    # 虾米音乐
     - "+.xiami.com"
-    #咪咕音乐
+    # 咪咕音乐
     - "+.music.migu.cn"
-    #Windows
+    # Windows
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - WORKGROUP
-    #QQ快捷登录
+    # QQ 快捷登录
     - "+.localhost.ptlogin2.qq.com"
     - "+.localhost.sec.qq.com"
-    #Game
-    #Nintendo Switch
+    # Game
+    # Nintendo Switch
     - "+.srv.nintendo.net"
-    #Sony PlayStation
+    # Sony PlayStation
     - "+.stun.playstation.net"
-    #Microsoft Xbox
+    # Microsoft Xbox
     - "+.xbox.*.microsoft.com"
     - "+.xnotify.xboxlive.com"
     - "+.ipv6.microsoft.com"
-    #Wotgame
+    # World of Tanks CN
     - "+.battlenet.com.cn"
     - "+.wotgame.cn"
     - "+.wggames.cn"
     - "+.wowsgame.cn"
     - "+.wargaming.net"
-    #Golang
+    # Golang
     - "proxy.golang.org"
-    #STUN
+    # STUN
     - "+.stun.*"
     - "+.stun.*.*"
     - "+.stun.*.*.*"
     - "+.stun.*.*.*.*"
     - "+.pvp.net"
-    #Linksys Router
+    # Linksys Router
     - "+.heartbeat.belkin.com"
     - "+.linksys.com"
     - "+.linksyssmartwifi.com"
-    #ASUS Router
+    # ASUS Router
     - "+.router.asus.com"
-    #Apple Software Update Service
+    # Apple Software Update Service
     - "+.mesu.apple.com"
     - "+.swscan.apple.com"
     - "+.swquery.apple.com"
     - "+.swdownload.apple.com"
     - "+.swcdn.apple.com"
     - "+.swdist.apple.com"
-    #Google
+    # Google
     - "+.lens.l.google.com"
     - "+.stun.l.google.com"
-    #Firebase Cloud Messaging
+    # Firebase Cloud Messaging
     - "fcm.googleapis.com"
     - "mtalk.google.com"
     - "alt*-mtalk.google.com"
-    #Huawei Push Service
+    # Huawei Push Service
     - "+.push.hicloud.com"
     - "+.push.dbankcloud.com"
-    #Xiaomi Push Service
+    # Xiaomi Push Service
     - "api.xmpush.xiaomi.com"
-    #APNS
+    # APNs
     - "+.push.apple.com"
-    #OPPO Push Service
+    # OPPO Push Service
     - "+.push.oppomobile.com"
-    #VIVO Push Service
+    # VIVO Push Service
     - "api-push.vivo.com.cn"
-    #Netflix
+    # Netflix
     - "+.nflxvideo.net"
-    #FinalFantasy XIV
+    # FinalFantasy XIV
     - "+.square-enix.com"
     - "+.finalfantasyxiv.com"
     - "+.ffxiv.com"
     - "+.ff14.sdo.com"
     - "ff.dorado.sdo.com"
-    #Bilibili CN
+    # Bilibili CN
     - "+.mcdn.bilivideo.cn"
-    #Disney Plus
+    # Disney Plus
     - "+.media.dssott.com"
